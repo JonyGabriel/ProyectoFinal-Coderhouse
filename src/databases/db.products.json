@@ -1,1 +1,104 @@
-[{"title":"Wine","category":"wines","description":"Cold wine","price":6.77,"code":"aaa003","stock":0,"status":true,"id":1},{"title":"Beer","category":"beers","description":"Cold beer","price":5.99,"code":"aaa005","stock":2,"status":true,"id":2},{"title":"Beer","category":"beers","description":"Cold beer","price":7.99,"code":"aaa006","stock":4,"status":true,"id":3}]
+[{
+  "_id": {
+    "$oid": "657a008a78b7d0136159b64f"
+  },
+  "id": 5,
+  "title": "MOUSELOGITECH SUPERLIGHT",
+  "description": "TOP MOUSE COMPETITIVE",
+  "price": 35000,
+  "code": "100PP",
+  "stock": 50,
+  "status": true,
+  "category": "Electronic Components"
+},
+{
+  "_id": {
+    "$oid": "657a008a78b7d0136159b64c"
+  },
+  "id": 1,
+  "title": "Computadora Gamer GAMA ALTA",
+  "description": "Computadora de alta gama",
+  "price": 200000,
+  "code": "555BB",
+  "stock": 20,
+  "status": true,
+  "category": "Electronic Components"
+},
+{
+  "_id": {
+    "$oid": "657a008a78b7d0136159b64d"
+  },
+  "id": 3,
+  "title": "Monitor Gamer",
+  "description": "Monitor 1920 x 1080 144HZ",
+  "price": 500000,
+  "code": "555AA",
+  "stock": 35,
+  "status": true,
+  "category": "Electronic Components"
+},
+{
+  "_id": {
+    "$oid": "657a008a78b7d0136159b64e"
+  },
+  "id": 4,
+  "title": "PC OFICINA",
+  "description": "Ideal para oficinas",
+  "price": 400000,
+  "code": "999PP",
+  "stock": 20,
+  "status": true,
+  "category": "Electronic Components"
+},
+{
+  "_id": {
+    "$oid": "657a008a78b7d0136159b650"
+  },
+  "id": 6,
+  "title": "MOUSEPAD XXL CONTROL",
+  "description": "Para mas espacio y control",
+  "price": 25000,
+  "code": "AAAA9",
+  "stock": 50,
+  "status": true,
+  "category": "Electronic Components"
+},
+{
+  "_id": {
+    "$oid": "657a008a78b7d0136159b651"
+  },
+  "id": 7,
+  "title": "PC GAMER GAMA MEDIA",
+  "description": "EXCELENTE PARA REQUISITOS MEDIOS",
+  "price": 800000,
+  "code": "BBBB8",
+  "stock": 25,
+  "status": true,
+  "category": "Electronicos"
+},
+{
+  "_id": {
+    "$oid": "65c4283ac3b7b187a39e8e43"
+  },
+  "title": "PC ALL in ONE",
+  "description": "AIO",
+  "price": 500000,
+  "code": "JJJJJ",
+  "stock": 4,
+  "category": "Electronic Components",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6601ee1c0b15a801e1f112a3"
+  },
+  "title": "NOTEBOOK GAMER",
+  "description": "AIO",
+  "price": 1050000,
+  "code": "JAHSC",
+  "stock": 10,
+  "category": "Electronic Components",
+  "status": true,
+  "__v": 0
+}]

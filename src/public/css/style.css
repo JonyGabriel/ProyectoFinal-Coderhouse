@@ -75,6 +75,9 @@ li{
   width: 6%;
   height: 20%;
 }
+.homeButtonRegister{
+  width: 6%;
+}
 .iconChat{
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(322deg) brightness(109%) contrast(105%);
 }
@@ -119,6 +122,7 @@ form {
 }
 input {
   border: 1px solid #0f0;
+  padding-left: 3px;
 }
 .loginPanel{
   display: flex;
@@ -129,8 +133,10 @@ input {
 button {
   padding: 10px;
   background-color: transparent;
-  border: 2px solid rgb(103, 119, 103);
-  
+}
+button {
+  color: white;
+  background-color: #000000;
 }
 .loginSession {
   display: flex;
@@ -164,9 +170,28 @@ p{
 .cartColor{
   background-color: black;
 }
-.buyCss{
+.buy-container{
   display: flex;
   gap: 20px;
+  justify-content: center;
+  padding: 2rem;
+}
+.buy-section-container{
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  border-left: 4px solid rgb(32, 32, 32);
+  border-top: 4px solid rgb(31, 31, 31);
+}
+.prod-buy{
+  color: rgb(255, 255, 255);
+}
+
+.textCartColor {
+  color: rgb(255, 255, 255);
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -179,12 +204,7 @@ p{
   align-items: center;
   gap: 10px;
 }
-.textCartColor {
-  color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .imgContainer{
   display: flex;
   align-items: center;
@@ -207,9 +227,6 @@ p{
   color: white;
 }
 
-button {
-  color: white;
-}
 a {
   text-decoration: none;
   color: #ffffff;
@@ -222,8 +239,17 @@ a {
 .buy-button{
   display: flex;
   justify-content: center;
+  background-color: #000000;
+  border: 2px solid #0f0;
 }
-
+#checkout-btn {
+  padding: 10px;
+  background-color: transparent;
+}
+#checkout-btn{
+  color: white;
+  background-color: #000000;
+}
 thead {
   color: rgb(255, 0, 0);
 }
@@ -253,8 +279,9 @@ td {
   border-radius: 5px;
   border: none;
   padding: 15px;
-  background-color: #5f5f5f;
+  background-color: transparent;
   height: 70%;
+  border: 1px solid #0f0;
 }
 
 .link-pages {
@@ -265,4 +292,40 @@ td {
   background-color: #b0b0b0;
   text-decoration: none;
   color: #ffffff;
+}
+
+.registerSession {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 18px;
+}
+
+.registerLabel{
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 3cm;
+  text-align: center;
+  line-height: 3cm;
+  border-bottom: 1px solid #0f0;
+}
+.fixFooter{
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3cm;
+  text-align: center;
+  line-height: 3cm; 
 }

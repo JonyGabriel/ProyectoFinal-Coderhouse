@@ -1,28 +1,36 @@
-<h1 class="textRegisterColor">Register Page</h1>
-<form class="textRegisterColor" style="padding: 40px">
-  <div >
-    <label for="email">Email:</label>
-    <input name="email" type="text" id="email">
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input name="password" type="text" id="password">
-  </div>
-  <div>
-    <label for="first-name">First Name:</label>
-    <input name="first-name" type="text" id="first_name">
-  </div>
-  <div>
-    <label for="last-name">Last Name:</label>
-    <input name="last-name" type="text" id="last_name">
-  </div>
-  <div>
-    <label for="age">Age:</label>
-    <input name="age" type="number" id="age">
-  </div>
-  <button type="submit">Register</button>
-</form>
+<nav class="navBar">
+  <h1 class="loginColorH1">Register Page</h1>
+</nav>
+<div class="homeButtonRegister">
+	<a href="/login">
+		<img class="iconChat" src="https://www.svgrepo.com/show/533593/arrow-left.svg" alt="" width="64px" height="64px">
+	</a>
+</div>
+<div class="formConteiner">
+  <form class="textRegisterColor" style="padding: 40px">
+    <div class="registerSession">
 
+        <label class="registerLabel" for="email">Email:</label>
+        <input name="email" type="text" id="email">
+
+        <label class="registerLabel" for="password">Password:</label>
+        <input name="password" type="text" id="password">
+
+        <label class="registerLabel" for="first-name">First Name:</label>
+        <input name="first-name" type="text" id="first_name">
+
+        <label class="registerLabel" for="last-name">Last Name:</label>
+        <input name="last-name" type="text" id="last_name">
+      
+      
+        <label class="registerLabel" for="age">Age:</label>
+        <input name="age" type="number" id="age">
+      
+      <br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
 <script>
   const form = document.querySelector("form")
   form.addEventListener("submit", e => {
@@ -40,3 +48,6 @@
       .then((res) => window.location.replace("/"+res.url))
   })
 </script>
+<footer class="fixFooter">
+	Copyright ©CompuSV
+</footer>
