@@ -1,0 +1,35 @@
+<main>
+  <div class="buyCss">
+  <h1>{{title}}</h1>
+  <h2>Category: {{category}}</h2>
+  <p>{{description}}</p>
+  <h2>Stock: {{stock}}</h2>
+  <h3>Price: ${{price}}</h3>
+  <button class="buy-button" id="{{_id}}">Buy</button>
+  </div>
+</main>
+<script>
+  document.querySelector(".buy-button").addEventListener("click", async (e) => {
+    if ("{{_id}}") {
+      await fetch(`/api/carts/{{user.cart}}/product/{{_id}}`, {method: "PUT", headers: {"Content-Type": "application/json"}, body: JSON.stringify({quantity: 1})})
+      window.location.replace("/products")
+    }
+    else {
+      await fetch(`/api/carts/{{user.cart}}/product/{{id}}`, {method: "PUT", headers: {"Content-Type": "application/json"}, body: JSON.stringify({quantity: 1})})
+      window.location.replace("/products")
+    }
+  })
+</script>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .buy-button {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: rgb(11, 134, 21);
+  }
+</style>

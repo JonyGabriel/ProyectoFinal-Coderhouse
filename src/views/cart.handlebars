@@ -1,0 +1,76 @@
+<body class='bodyCart'>
+	<main>
+		<div class="homeButton">
+			<a href="/products">
+				<img class="iconChat" src="https://www.svgrepo.com/show/533593/arrow-left.svg" alt="" width="64px" height="64px">
+			</a>
+  	</div>
+		<div class='cartText'>
+			<h2>Cart Products</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Category</th>
+						<th>Quantity</th>
+						<th>Price by unit</th>
+					</tr>
+				</thead>
+				<tbody class='bodyCart'>
+					{{#each products}}
+						<tr class='product'>
+							<td style="text-align: center;" class='name'>{{this.product.title}}</td>
+							<td style="text-align: center;" class='category'>{{this.product.category}}</td>
+							<td style="text-align: center;" class='quantity'>{{this.quantity}}</td>
+							<td style="text-align: center;" class='price'>{{this.product.price}}</td>
+						</tr>
+					{{/each}}
+					<tr>
+						<td colspan="3" style="text-align: right;">Total Price:</td>
+						<td id="total-price">$0</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="text-align: right;">Total Quantity:</td>
+						<td id="total-quantity">0</td>
+					</tr>
+				</tbody>
+			</table>
+			<button class='buy-button'>Comprar</button>
+			<button id='checkout-btn'>Comprar con Mercado Pago</button>
+			<div id='wallet_container'></div>
+		</div>
+	</main>
+	<script src='https://sdk.mercadopago.com/js/v2'></script>
+	<script src='/static/js/mpscript.js'></script>
+	<script>
+  document.querySelector(".buy-button").addEventListener("click", async (e) => {
+    if ("{{_id}}") {
+      const result = await (await fetch(`/api/carts/{{_id}}/purchase`, {method: "POST"})).json()
+      console.log(result)
+    }
+    else {
+      const result = await (await fetch(`/api/carts/{{id}}/purchase`, {method: "POST"})).json()
+      console.log(result)
+    }
+    window.location.replace("/products")
+  })
+</script>
+<script>
+	const priceElements = document.querySelectorAll('.price');
+	const quantityElements = document.querySelectorAll('.quantity');
+	
+	let totalPrice = 0;
+	let totalQuantity = 0;
+	
+	[...priceElements].reduce((acc, priceElement, index) => {
+		const price = parseFloat(priceElement.textContent);
+		const quantity = parseInt(quantityElements[index].textContent, 10);
+		totalPrice += price * quantity;
+		totalQuantity += quantity;
+		return acc;
+	}, {});
+	
+	document.querySelector('#total-price').textContent = `$${totalPrice.toFixed(2)}`;
+	document.querySelector('#total-quantity').textContent = totalQuantity;
+</script>
+</body>

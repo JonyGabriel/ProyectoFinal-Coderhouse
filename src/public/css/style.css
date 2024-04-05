@@ -1,0 +1,268 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #0f0;
+  background: url(../img/wall.png);
+}
+html {
+  height: 100%;
+}
+main {
+  color: rgb(0, 0, 0);
+}
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ul{
+  display: flex;
+  gap: 100px;
+  padding: 10px;
+
+}
+li{
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+}
+.sections{
+  display: flex;
+  justify-content: space-around;
+}
+/*Cart*/
+.bodyCart {
+  background-color: black;
+}
+
+
+.loginColorH1{
+  color: #0f0;
+  font-size: 35px;
+  -webkit-text-stroke: 0.1px rgb(0, 255, 64);
+  color: transparent;
+}
+/*Products*/
+.tBodyProducts{
+  background-color: #000000;
+}
+.bodyProducts{
+  background: url(null);
+  background: url(../img/wallpaperflare.com_wallpaper.jpg)
+}
+
+.textColorH1{
+  color: #0f0;
+  font-size: 35px;
+  -webkit-text-stroke: 0.1px rgb(250, 168, 243);
+  color: transparent;
+}
+/*Chat*/
+.bodyChat{
+  background: url(null);
+  background: url(../img/keyboard_keys_black_208555_1920x1080.jpg);
+}
+.homeButton{
+  width: 6%;
+  height: 20%;
+}
+.iconChat{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(322deg) brightness(109%) contrast(105%);
+}
+h2{
+  font-size: 30px;
+  color: white;
+}
+.chatConteiner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+  color: rgb(255, 255, 255);
+}
+.sendButton{
+  display: flex;
+  margin-top: 3%;
+}
+h3{
+  padding: 2%;
+  color: white;
+}
+h4{ 
+  color: white;
+  padding-left: 2%;
+}
+
+/*Login*/
+form {
+  width: 200px;
+}
+.formConteiner {
+  display: flex;
+  justify-content: center;
+  padding: 8%;
+}
+
+.loginLabel{
+  display: flex;
+  justify-content: center;
+  
+}
+input {
+  border: 1px solid #0f0;
+}
+.loginPanel{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+}
+button {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid rgb(103, 119, 103);
+  
+}
+.loginSession {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 15px;
+}
+input{
+  color: rgb(0, 0, 0);
+}
+.containerLogin{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+p{
+  color: rgb(255, 255, 255);
+}
+.userColor{
+  color: white;
+}
+.cartText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.cartColor{
+  background-color: black;
+}
+.buyCss{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.textRegisterColor{
+  color: white;
+}
+.adminText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.textCartColor {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img-top{
+  height: 50px;
+  width: 50px;
+  
+}
+.container-products{
+  display: grid;
+
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+button {
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.cartButton {
+  height: 20%;
+  text-decoration: none;
+}
+
+.buy-button{
+  display: flex;
+  justify-content: center;
+}
+
+thead {
+  color: rgb(255, 0, 0);
+}
+
+th, td {
+  color: #ffffff;
+  padding: 20px;
+}
+
+td {
+  color: rgb(255, 255, 255);
+}
+
+.view-more-button {
+  padding: 5px;
+  background-color: #000000;
+  font-weight: 600;
+  border-radius: 3px;
+  border: solid 1px #0f0;
+}
+.buttonSpace{
+  padding-top: 10px;
+}
+.actual-page {
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  background-color: #5f5f5f;
+  height: 70%;
+}
+
+.link-pages {
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #b0b0b0;
+  text-decoration: none;
+  color: #ffffff;
+}
