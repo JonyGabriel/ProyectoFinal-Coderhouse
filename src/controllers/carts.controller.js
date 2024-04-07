@@ -163,11 +163,7 @@ export const purchaseCart = async (req, res) => {
 			unavailableProducts
 		);
 
-		mail.send(
-			req?.user?.user?.email,
-			'Compra realizada',
-			'<h1>Relisazte la compra</h1>'
-		);
+		mail.send(req?.user?.user?.email, "Compra realizada", `<h1>Relizaste la compra, muchas gracias por comprar en Compu SV</h1> <p>${JSON.stringify(purchasedProducts)}</p>`)
 
 		res.json({
 			status: 'success',
@@ -195,7 +191,7 @@ export const createPreference = async (req, res) => {
 		};
 
 		const preference = new Preference(client);
-		const result = await preference.create({ body });
+		const result = await preference.create({body});
 		res.json({
 			id: result.id,
 		});

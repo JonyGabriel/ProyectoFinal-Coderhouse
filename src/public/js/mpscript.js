@@ -15,7 +15,7 @@ rows.forEach((row) => {
 });
 
 		const response = await fetch(
-			'http://localhost:8080/api/carts/create_preference',
+			'http://127.0.0.1:8080/api/carts/create_preference',
 			{
 				method: 'POST',
 				headers: {
@@ -44,7 +44,7 @@ const createCheckoutButton = (preferenceId) => {
 		await bricksBuilder.create('wallet', 'wallet_container', {
 			initialization: {
 				preferenceId: preferenceId,
-				redirectMode:'modal',
+				redirectMode:'blank',
 			},
 		});
 	};

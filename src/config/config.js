@@ -10,3 +10,5 @@ export const PERSISTENCE = process.env.PERSISTENCE
 export const NODE_ENV = process.env.NODE_ENV
 export const MAIL_USER = process.env.MAIL_USER
 export const MAIL_PASS = process.env.MAIL_PASS
+export const MP_ACCESS = process.env.MP_ACCESS
+export const MP_PUBLIC = process.env.MP_PUBLIC

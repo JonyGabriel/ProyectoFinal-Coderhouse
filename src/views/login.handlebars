@@ -15,10 +15,32 @@
         <button><a href="/api/session/github">Login with Github</a></button>
         <br>
         <button><a href="/register">Registrate</a></button>
+        <br>
+        <button><a href="/api/session/change-password" id="change">Cambiar contraseña</a></button>
+        <input type="text" name="" id="emailText" placeholder="Tu email aqui">
       </div>
     </div>
   </form>
 </div>
+<script>
+  document.getElementById("change").addEventListener("click", async () => {
+    event.preventDefault();
+    const userEmail = document.getElementById('emailText').value;
+    const uEmail = {
+      email: userEmail
+    };
+    const result = await fetch(`/api/session/change-password`, {
+      method: "POST",
+      body: JSON.stringify(uEmail),
+      headers: {"Content-Type": "application/json"}
+    });
+    if (result.ok) {
+      alert("Se ha enviado un correo");
+    } else {
+      alert("Ha ocurrido un error. Por favor, inténtalo de nuevo");
+    }
+  });
+</script>
 <footer>
 Copyright ©CompuSV
 </footer>

@@ -58,6 +58,10 @@ export const chatView = (req, res) => {
   return res.render("chat", {})
 }
 
+export const changePasswordMail = (req, res) => {
+  return res.render(user.email)
+}
+
 export const resetPasswordView =  async (req,res) => {
   try {
 
