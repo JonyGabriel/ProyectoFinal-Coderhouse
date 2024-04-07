@@ -6,8 +6,8 @@ document.getElementById('checkout-btn').addEventListener('click', async () => {
 	try {
 		// Calculate the total price of the cart
 		const items = [];
-const rows = document.querySelectorAll('.product');
-rows.forEach((row) => {
+	const rows = document.querySelectorAll('.product');
+	rows.forEach((row) => {
   const name = row.querySelector('.name').innerText;
   const quantity = Number(row.querySelector('.quantity').innerText);
   const price = Number(row.querySelector('.price').innerText);
