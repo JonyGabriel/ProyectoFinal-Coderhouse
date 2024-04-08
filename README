@@ -1,11 +1,14 @@
 #INICIAR REPOSITORIO CON:
+
 nodemon src/app.js
 # PARA USAR ESTE REPOSITORIO SE REQUIERE INSTALAR ESTAS DEPENDENCIAS. 
 npm i express bcrypt commander connect-mongo cookie-parser dotenv express-handlebars jsonwebtoken mongoose mongoose-paginate-v2 multer passport passport-local passport-github2 passport-jwt session crypto nodemailer session moment faker winston swagger-jsdoc swagger-ui-express mercadopago cors
 npm install --save-dev chai
 npm install --save-dev mocha
 npm install --save-dev supertest
+
 #ENVIROMENT
+
 PORT = 8080
 MONGO_URL = mongodb+srv://jonygabriiel:Jony2915.@clusterjony.eun5mgo.mongodb.net/
 MONGO_DBNAME = ecommerce
