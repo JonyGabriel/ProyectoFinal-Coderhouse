@@ -8,6 +8,7 @@ import {
 	updateCartProducts,
 	updateProductFromCart,
 	createPreference,
+	webLogs,
 } from '../controllers/carts.controller.js';
 import { authorization } from '../middlewares/auth.middlewares.js';
 import passport from 'passport';
@@ -25,6 +26,8 @@ router.post(
 );
 
 router.post('/create_preference', createPreference);
+
+router.post('/webhook', webLogs);	
 
 router.put(
 	'/:cid',

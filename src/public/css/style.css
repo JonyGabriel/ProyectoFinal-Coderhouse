@@ -39,6 +39,9 @@ li{
   display: flex;
   justify-content: space-around;
 }
+.disappearButton {
+	display: none;
+}
 /*Cart*/
 .bodyCart {
   background-color: black;
@@ -343,6 +346,8 @@ td {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
   background-color: black;
   color: white;
   width: 100%;

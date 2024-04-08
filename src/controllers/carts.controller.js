@@ -163,7 +163,7 @@ export const purchaseCart = async (req, res) => {
 			unavailableProducts
 		);
 
-		mail.send(req?.user?.user?.email, "Compra realizada", `<h1>Relizaste la compra, muchas gracias por comprar en Compu SV</h1> <p>${JSON.stringify(purchasedProducts)}</p>`)
+		mail.send(req?.user?.user?.email, "Compra realizada", `<h1>Relizaste una compra, muchas gracias por comprar en Compu SV</h1> <p>${JSON.stringify(purchasedProducts)}</p>`)
 
 		res.json({
 			status: 'success',
@@ -180,6 +180,9 @@ export const purchaseCart = async (req, res) => {
 	
 export const createPreference = async (req, res) => {
 	try {
+		if (!Array.isArray(req.body.items) || req.body.items.length === 0) {
+			throw new Error('No items provided for preference creation');
+	}
 		const body = {
 			items: req.body.items,
 			back_urls: {
@@ -188,10 +191,11 @@ export const createPreference = async (req, res) => {
 				pending: 'http://127.0.0.1:8080/products',
 			},
 			auto_return: 'approved',
+			notification_url: "https://e5b7-38-10-113-39.ngrok-free.app/webhook"
 		};
 
 		const preference = new Preference(client);
-		const result = await preference.create({body});
+		const result = await preference.create({ body });
 		res.json({
 			id: result.id,
 		});
@@ -202,3 +206,38 @@ export const createPreference = async (req, res) => {
 		});
 	}
 };
+export const webLogs = async (req, res) => {
+	const paymentId = req.query.payment_id;
+	try {
+		const response = await fetch(`https://api.mercadopago.com/v1/payments/${paymentId}`, {
+			method:'GET',
+			headers:{
+				'Authorization': `Bearer ${client.accessToken}`
+			}
+		});
+
+		if (response.ok){
+			const data = await response.json();
+			console.log(data);
+
+			// Envía el correo electrónico con los detalles de la compra
+			const mail = new Mail();
+			const subject = 'Detalles de la compra';
+			const html = `
+				<h1>Relizaste una compra, muchas gracias por comprar en Compu SV</h1>
+				<p><strong>ID de pago:</strong> ${data.id}</p>
+				<p><strong>Estado del pago:</strong> ${data.status}</p>
+				<p><strong>Fecha y hora del pago:</strong> ${data.date_created}</p>
+				<p><strong>Monto del pago:</strong> ${data.transaction_amount}</p>
+				<p><strong>Descripción del pago:</strong> ${data.description}</p>
+				<p><strong>Correo electrónico del pagador:</strong> ${data.payer.email}</p>
+			`;
+			mail.send(data.payer.email, subject, html);
+		}
+
+		res.sendStatus(200);
+	} catch (error) {
+		console.error('Error:', error);
+		res.sendStatus(500);
+	}
+}
