@@ -5,3 +5,17 @@ npm i express bcrypt commander connect-mongo cookie-parser dotenv express-handle
 npm install --save-dev chai
 npm install --save-dev mocha
 npm install --save-dev supertest
+#ENVIROMENT
+PORT = 8080
+MONGO_URL = mongodb+srv://jonygabriiel:Jony2915.@clusterjony.eun5mgo.mongodb.net/
+MONGO_DBNAME = ecommerce
+NODE_ENV = DEVELOPMENT
+CLIENTID=Iv1.6ecd5f18ae256a9a
+CLIENTSECRET=4f3fb77c52f7dafd3a38afacb329ee9dd4071667
+ADMINUSER=adminCoder@coder.com
+ADMINPASS=adminCod3r123
+PERSISTENCE = MONGO
+MAIL_USER = jonygaabriel@gmail.com
+MAIL_PASS = hwat ujaw ezhd hsdk
+MP_ACCESS = TEST-6769129066925551-032319-cba08c8c83a930e8573509e0629f127d-387993007
+MP_PUBLIC = TEST-64939da2-3b86-4840-8e2f-6c374693c554
