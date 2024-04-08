@@ -186,9 +186,9 @@ export const createPreference = async (req, res) => {
 		const body = {
 			items: req.body.items,
 			back_urls: {
-				success: 'http://127.0.0.1:8080/products',
-				failure: 'http://127.0.0.1:8080/products',
-				pending: 'http://127.0.0.1:8080/products',
+				success: '/products',
+				failure: '/products',
+				pending: '/products',
 			},
 			auto_return: 'approved',
 			notification_url: "https://e5b7-38-10-113-39.ngrok-free.app/webhook"

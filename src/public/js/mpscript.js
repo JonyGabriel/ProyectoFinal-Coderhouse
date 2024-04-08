@@ -18,7 +18,7 @@ mpButton.addEventListener('click', async () => {
 });
 
 		const response = await fetch(
-			'http://localhost:8080/api/carts/create_preference',
+			'/api/carts/create_preference',
 			{
 				method: 'POST',
 				headers: {

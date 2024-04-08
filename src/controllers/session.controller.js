@@ -82,7 +82,7 @@ export const changePasswordMail = async (req, res) => {
 
     const token = generateToken(user, "1h")
 
-    const url = `http://127.0.0.1:8080/reset-password?token=${token}`
+    const url = `/reset-password?token=${token}`
 
     await mail.send(email, "Cambiar contraseña", `${url}`)
 
